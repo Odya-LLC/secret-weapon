@@ -2,7 +2,7 @@ from app import db
 from datetime import datetime
 from hashlib import sha256
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField, validators
+from wtforms import StringField, TextAreaField, validators, PasswordField
 from wtforms.validators import DataRequired
 
 def create_hash(text, secret):
@@ -11,11 +11,11 @@ def create_hash(text, secret):
 
 class SetForm(FlaskForm):
     message = TextAreaField('Message', [DataRequired()])
-    secret = StringField('Secret', validators=[DataRequired()])
+    secret = PasswordField('Secret', validators=[DataRequired()])
     
 class GetForm(FlaskForm):
     hash = StringField('Hash', [DataRequired()])
-    secret = StringField('Secret', validators=[DataRequired()])
+    secret = PasswordField('Secret', validators=[DataRequired()])
 
 class Messages(db.Model):
     
