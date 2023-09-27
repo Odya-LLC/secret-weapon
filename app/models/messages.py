@@ -2,7 +2,7 @@ from app import db
 from datetime import datetime
 from hashlib import sha256
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField, validators, PasswordField
+from wtforms import StringField, TextAreaField, PasswordField
 from wtforms.validators import DataRequired
 
 def create_hash(text, secret):
@@ -23,7 +23,6 @@ class Messages(db.Model):
     text = db.Column(db.Text, nullable=False)
     secret = db.Column(db.String, nullable=False)
     hash = db.Column(db.String, nullable=False)
-    read = db.Column(db.Boolean, nullable=False, default=False)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
     
     
@@ -34,19 +33,16 @@ class Messages(db.Model):
     @staticmethod
     def set(text, secret):
         h = create_hash(text, secret)
-        m = Messages(text=text, secret=secret, hash=h)
-        db.session.add(m)
-        db.session.commit()
+        m = Messages(text=text, secret=secret, hash=h).save()
+        
         return h
     
     @staticmethod
     def get(hash, secret):
         m = Messages.query.filter_by(hash=hash, secret=secret).first()
         if m:
-            if not m.read:
-                m.read = True
-                db.session.commit()
-                return m.text
-            else:
-                return None
+            t = m.text
+            db.session.delete(m)
+            db.session.commit()
+            return t
         return None
