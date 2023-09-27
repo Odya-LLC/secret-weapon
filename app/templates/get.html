@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{_('Get Message')}}
+{% endblock %}
+
+{% block content %}
+                <section class="nes-container with-title">
+                    <h3 class="title">{{_('Your message')}}</h3>
+                    {% if message %}
+                        
+                    <div class="nes-field">
+                        
+                        <div id="textarea" class="item">
+                           
+                        <textarea name="text" id="textarea_field" class="nes-textarea">
+                            {{ message }}
+                        </textarea>
+                        
+                       
+                    </div>
+                    </div>
+                    {% else %}
+                    <div id="badges" class="item">
+                        
+                    <a href="#" class="nes-badge">
+                        <span class="is-error">{{_('Not Found')}}</span>
+                      </a>
+                    </div>
+                    {% endif %}
+                    
+                </section>
+
+                {% endblock %}

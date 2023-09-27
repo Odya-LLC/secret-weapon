@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{_('Setting message')}}
+{% endblock %}
+
+{% block content %}
+                <section class="nes-container with-title">
+                    <h3 class="title">{{_('Your hash')}}</h3>
+                    
+                        
+                        <div class="nes-field">
+                            <input type="text" value="{{hash}}"  id="hash" name="hash" readonly class="nes-input">
+                        </div>
+                        
+                    
+                    
+                </section>
+
+                {% endblock %}

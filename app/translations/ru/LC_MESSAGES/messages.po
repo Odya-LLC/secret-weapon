@@ -1,0 +1,93 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-09-27 15:15+0600\n"
+"PO-Revision-Date: 2023-09-27 15:15+0600\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: app/templates/base.html:36
+msgid "Send anonym messages"
+msgstr "Отправляйте анонимные сообщения"
+
+#: app/templates/base.html:42
+msgid "About me"
+msgstr "Обо мне"
+
+#: app/templates/get.html:5
+msgid "Get Message"
+msgstr "Получить сообщение"
+
+#: app/templates/get.html:10
+msgid "Your message"
+msgstr ""
+
+#: app/templates/get.html:28
+msgid "Not Found"
+msgstr "Не найдено"
+
+#: app/templates/index.html:12
+msgid ""
+"Secret Weapon is a service for sending anonymous messages that can only "
+"be read once!"
+msgstr "Secret Weapon - сервис для отправки анонимных сообщений, которые можно прочитать только один раз!"
+
+#: app/templates/index.html:13
+msgid ""
+"Type your message and secret key, but remember the secret. Once you click"
+" 'send,' your message will be encrypted in the database, and you will "
+"receive a hash to read the message."
+msgstr "Введите сообщение и секретный ключ, но запомните секрет. После нажатия на кнопку 'отправить' ваше сообщение будет зашифровано в базе данных, и вы получите хеш для чтения сообщения."
+
+#: app/templates/index.html:16
+msgid "Sending message"
+msgstr "Отправка сообщения"
+
+#: app/templates/index.html:22
+msgid "Message"
+msgstr "Сообщение"
+
+#: app/templates/index.html:27 app/templates/index.html:48
+msgid "Your secret"
+msgstr "Ваш секрет"
+
+#: app/templates/index.html:30
+msgid "Send"
+msgstr "Отправить"
+
+#: app/templates/index.html:36
+msgid ""
+"Enter the hash and secret key you received to access the message. If the "
+"message exists, it will be displayed, and after reading, it will be "
+"automatically deleted. You will not be able to read it again"
+msgstr "Введите хеш и секретный ключ, которые вы получили, чтобы получить доступ к сообщению. Если сообщение существует, оно будет отображено, и после прочтения оно будет автоматически удалено. Вы не сможете прочитать его снова"
+
+#: app/templates/index.html:39
+msgid "Getting message"
+msgstr "Получение сообщения"
+
+#: app/templates/index.html:44 app/templates/set.html:10
+msgid "Your hash"
+msgstr "Ваш хеш"
+
+#: app/templates/index.html:51
+msgid "Get"
+msgstr "Получить"
+
+#: app/templates/set.html:5
+msgid "Setting message"
+msgstr "Установка сообщения"
+

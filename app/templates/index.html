@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Base
+{% endblock %}
+
+{% block content %}
+<section class="topic">
+    <!-- <h2 id="installation">
+        <a href="#installation">#</a>How to Use</h2>  -->
+        <p>{{ _('Secret Weapon is a service for sending anonymous messages that can only be read once!') }}</p> 
+        <p>{{ _("Type your message and secret key, but remember the secret. Once you click 'send,' your message will be encrypted in the database, and you will receive a hash to read the message.")}}</p>
+    </section>
+                <section class="nes-container with-title">
+                    <h3 class="title">{{_('Sending message')}}</h3>
+                    <form action="/set" method="post">
+                        {{ setform.hidden_tag() }}
+                        <div class="nes-field">
+                        
+                            <div id="textarea" class="item">
+                                <label for="textarea_field">{{_('Message')}}</label>
+                                {{ setform.message(class_="nes-textarea") }}
+                            </div>
+                        </div>
+                        <div class="nes-field">
+                            <label for="name_field">{{_('Your secret')}}</label>
+                            {{ setform.secret(class_="nes-input") }}
+                        </div>
+                        <button type="submit" class="nes-btn is-success mt-3">{{_('Send')}}</button>
+        
+                    </form>
+                    
+                </section>
+                <section class="topic my-3">
+                        <p>{{_('Enter the hash and secret key you received to access the message. If the message exists, it will be displayed, and after reading, it will be automatically deleted. You will not be able to read it again')}}</p> 
+                    </section>
+                <section class="nes-container with-title mt-5">
+                    <h3 class="title">{{_('Getting message')}}</h3>
+                    <form action="/get" method="post">
+                        
+                        {{ getform.hidden_tag() }}
+                        <div class="nes-field">
+                            <label for="name_field">{{_('Your hash')}}</label>
+                            {{ getform.hash(class_="nes-input") }}
+                        </div>
+                        <div class="nes-field">
+                            <label for="name_field">{{_('Your secret')}}</label>
+                            {{ getform.secret(class_="nes-input") }}
+                        </div>
+                        <button type="submit" class="nes-btn is-success mt-3">{{_('Get')}}</button>
+        
+                    </form>
+                    
+                </section>
+{% endblock %}

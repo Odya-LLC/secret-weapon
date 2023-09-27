@@ -1,0 +1,91 @@
+# Translations template for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-09-27 15:15+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: app/templates/base.html:36
+msgid "Send anonym messages"
+msgstr ""
+
+#: app/templates/base.html:42
+msgid "About me"
+msgstr ""
+
+#: app/templates/get.html:5
+msgid "Get Message"
+msgstr ""
+
+#: app/templates/get.html:10
+msgid "Your message"
+msgstr ""
+
+#: app/templates/get.html:28
+msgid "Not Found"
+msgstr ""
+
+#: app/templates/index.html:12
+msgid ""
+"Secret Weapon is a service for sending anonymous messages that can only "
+"be read once!"
+msgstr ""
+
+#: app/templates/index.html:13
+msgid ""
+"Type your message and secret key, but remember the secret. Once you click"
+" 'send,' your message will be encrypted in the database, and you will "
+"receive a hash to read the message."
+msgstr ""
+
+#: app/templates/index.html:16
+msgid "Sending message"
+msgstr ""
+
+#: app/templates/index.html:22
+msgid "Message"
+msgstr ""
+
+#: app/templates/index.html:27 app/templates/index.html:48
+msgid "Your secret"
+msgstr ""
+
+#: app/templates/index.html:30
+msgid "Send"
+msgstr ""
+
+#: app/templates/index.html:36
+msgid ""
+"Enter the hash and secret key you received to access the message. If the "
+"message exists, it will be displayed, and after reading, it will be "
+"automatically deleted. You will not be able to read it again"
+msgstr ""
+
+#: app/templates/index.html:39
+msgid "Getting message"
+msgstr ""
+
+#: app/templates/index.html:44 app/templates/set.html:10
+msgid "Your hash"
+msgstr ""
+
+#: app/templates/index.html:51
+msgid "Get"
+msgstr ""
+
+#: app/templates/set.html:5
+msgid "Setting message"
+msgstr ""
+
