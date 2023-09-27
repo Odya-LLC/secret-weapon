@@ -1,4 +1,5 @@
 flask-babel
 flask-sqlalchemy
 flask-wtf
+gunicorn
 pip-chill
