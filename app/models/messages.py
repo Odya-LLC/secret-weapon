@@ -16,6 +16,9 @@ class SetForm(FlaskForm):
 class GetForm(FlaskForm):
     hash = StringField('Hash', [DataRequired()])
     secret = PasswordField('Secret', validators=[DataRequired()])
+    
+class MessageForm(FlaskForm):
+    secret = PasswordField('Secret', validators=[DataRequired()])
 
 class Messages(db.Model):
     
@@ -28,6 +31,10 @@ class Messages(db.Model):
     
     def save(self):
         db.session.add(self)
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self)
         db.session.commit()
     
     @staticmethod
